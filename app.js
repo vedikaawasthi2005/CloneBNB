@@ -2,7 +2,7 @@ if(process.env.NODE_ENV!="production"){
     require('dotenv').config()
 
 }
-
+// require('dotenv').config();
 
 
 
@@ -26,7 +26,8 @@ const userRouter=require("./routes/user.js")
 
 
 
-// const Mango_url = "mongodb://127.0.0.1:27017/project";
+// const dbUrl = "mongodb://127.0.0.1:27017/project";
+
 const dbUrl=process.env.ATLASDB_URL
 
 main()
@@ -119,7 +120,7 @@ app.use((err, req, res, next) => {
      //res.status(statusCode).send(message);
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 
 app.listen(PORT, () => {
     console.log("app is listening to port 8080");
