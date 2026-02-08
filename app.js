@@ -123,5 +123,5 @@ app.use((err, req, res, next) => {
 const PORT = process.env.PORT || 8080;
 
 app.listen(PORT, "0.0.0.0", () => {
-    console.log("app is listening to port 8080");
+    console.log(`app is listening to port ${PORT}`);
 });
